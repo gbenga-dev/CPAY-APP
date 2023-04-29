@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPAY.CPAY.DashBoard"
+             Title="DashBoard">
+    <VerticalStackLayout>
+        <Frame HeightRequest="810"
+               Margin="0,0,0,0"
+               BackgroundColor="Transparent"
+               BorderColor="Transparent"
+               CornerRadius="0">
+
+            <AbsoluteLayout WidthRequest="400"
+                            HeightRequest="810"
+                            BackgroundColor="Transparent"
+                            IsClippedToBounds="True">
+
+                <Ellipse Fill="Orange"
+                         WidthRequest="400"
+                         HeightRequest="400"
+                         Margin="-200,-50,0,0"/>
+
+                <Ellipse Fill="Orange"
+                         WidthRequest="400"
+                         HeightRequest="400"
+                         Margin="200,450,0,0"
+                         />
+                <!--Welcome account and notification-->
+                <HorizontalStackLayout Margin="27,10,0,0">
+                    <Label Text="Hi, Gbenga"
+                               FontSize="20"
+                               FontAttributes="Bold">
+                        
+
+
+                    </Label>
+                </HorizontalStackLayout>
+                
+                               
+                <!--Account Information Dashboard-->    
+                <Frame Margin="25,50,0,0"
+                       WidthRequest="350"
+                       HeightRequest="200"
+                       BorderColor="Orange">
+                    <StackLayout 
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="CenterAndExpand"
+                                 WidthRequest="350"
+                                 HeightRequest="200">
+                        <HorizontalStackLayout VerticalOptions="CenterAndExpand"
+                                               HorizontalOptions="CenterAndExpand">
+                            
+                            <VerticalStackLayout Margin="0,0,0,0">
+                                <Label  Text="Balance:"
+                                        FontSize="15"
+                                        FontAttributes="Bold"/>
+
+                                <Label  Text=" "
+                                        FontSize="15"
+                                        x:Name="lblBalance"
+                                        BackgroundColor="Transparent"/>
+
+                                <Label  Text="Account Number"
+                                        FontSize="15"
+                                        FontAttributes="Bold"
+                                        Margin="0,10,0,0"/>
+
+                                <Label  Text="0227770371"
+                                        FontSize="15"
+                                        x:Name="lblAccountNo"
+                                        BackgroundColor="Transparent"/>
+
+                                <Button Text="Fund Account"
+                                        Margin="0,20,0,0"
+                                        BackgroundColor="Orange"/>
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout Margin="65,0,0,0">
+                                <Label Text="Status"
+                                       FontSize="15"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="End"/>
+                                
+                                <Label Text="Active"
+                                       FontSize="15"
+                                       HorizontalTextAlignment="End"/>
+                                
+                                <Label Text="Type"
+                                       FontSize="15"
+                                       Margin="0,10,0,0"
+                                       FontAttributes="Bold"
+                                       HorizontalTextAlignment="End"/>
+                                
+                                <Label Text="Tier 3 Savings Account"
+                                       FontSize="15"
+                                       HorizontalTextAlignment="End"/>
+                                
+                                <Button Text="Acct History"
+                                        FontSize="15"
+                                        Margin="0,20,0,0"
+                                        WidthRequest="160"
+                                        BackgroundColor="Orange"/>
+
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </Frame>
+                
+                <!--Actions to be performed on account such as Deposit, Withdraw, Bill Payment, Loans, e.t.c-->
+                <Frame Margin="25,300,0,0"
+                       WidthRequest="350"
+                       HeightRequest="350"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       BorderColor="Orange">
+                    <StackLayout>
+
+                        <Label Text="What would you like&#10;to do?"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"/>
+
+                        <Grid RowSpacing="30"
+                              ColumnSpacing="15"
+                              Margin="0,30,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Deposit"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="Depositbtn"
+                                    Clicked="Depositbtn_Clicked"/>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Withdraw"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="Withdrawbtn"
+                                    Clicked="Withdrawbtn_Clicked"/>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Check Balance"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="CheckBalancebtn"
+                                    Clicked="CheckBalancebtn_Clicked"/>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Bill Payment"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="BillPaymentbtn"/>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Loans"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="Loansbtn"/>
+
+                            <Button BackgroundColor="Transparent"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Text="Create Account"
+                                    TextColor="Orange"
+                                    FontAttributes="Bold"
+                                    FontAutoScalingEnabled="True"
+                                    x:Name="CreateAccountbtn"/>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+                <Button BackgroundColor="Transparent"
+                        BorderColor="Black"
+                                BorderWidth="1"
+                                WidthRequest="120"
+                                HeightRequest="40"
+                                AbsoluteLayout.LayoutBounds="150,660"
+                                Text="Log Out"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                FontAutoScalingEnabled="True"
+                                x:Name="LogOutbtn"
+                                Clicked="LogOutbtn_Clicked"/>
+                <Label Text="Version 1.4.1"
+                       AbsoluteLayout.LayoutBounds="170,700"/>
+            </AbsoluteLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

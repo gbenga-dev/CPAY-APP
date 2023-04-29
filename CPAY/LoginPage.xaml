@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CPAY.CPAY.LoginPage"
+             Title="LoginPage">
+    <VerticalStackLayout>
+        <!--Exit App Button-->
+        <Button Text="Exit App"
+                TextColor="Red"
+                FontSize="15"
+                FontAttributes="Bold"
+                WidthRequest="100"
+                BackgroundColor="Transparent"
+                Margin="300,0,0,0"
+                x:Name="exitapp"
+                Clicked="exitapp_Clicked"/>
+        <!--Header or Title-->
+        <Label 
+            Text="Welcome to C-PAY Microfinance Bank"
+            FontSize="20"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,50,0,0"/>
+
+        <StackLayout Margin="0,100,0,0"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <!--User enters username-->
+            <Label Text="Username"
+                   FontSize="15"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="UsernameEntry"
+                   WidthRequest="300"/>
+
+            <!--User enters Password-->
+            <Label Text="Password"
+                   Margin="0,5,0,0"
+                   FontSize="15"
+                   FontAttributes="Bold"/>
+            <Entry x:Name="PasswordEntry"
+                   IsPassword="true"
+                   IsReadOnly="True"
+                   WidthRequest="300"/>
+        </StackLayout>
+        <StackLayout>
+            
+            <Frame WidthRequest="200"
+                   HeightRequest="250"
+                   Margin="0, 5, 0, 0"
+                   BackgroundColor="Transparent"
+                   BorderColor="Transparent">
+
+                <Grid RowSpacing="5"
+                      ColumnSpacing="5"
+                      WidthRequest="300">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="1"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton1"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="2"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton2"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="3"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton3"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="4"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton4"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="5"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton5"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="6"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton6"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="7"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton7"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="8"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton8"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Text="9"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton9"
+                            Clicked="OnNumberButtonClicked"/>
+
+                    <Button Grid.Row="3"
+                            FontAttributes="Bold"
+                            Grid.Column="0"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"/>
+
+                    <Button Text="0"
+                            FontSize="25"
+                            FontAttributes="Bold"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            x:Name="OnNumberButton0"
+                            Clicked="OnNumberButtonClicked"
+                                        />
+
+                    <Button FontAttributes="Bold"
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            Text="&#xf55a;"
+                            FontFamily="FASolid"
+                            x:Name="OnClearButton"
+                            Clicked="OnClearButton_Clicked"/>
+                </Grid>
+
+            </Frame>
+            
+            <!--The Login Button-->
+            <Button Text="Login" 
+                    Clicked="LoginButton_Clicked"
+                    x:Name="LoginButton"
+                    WidthRequest="200"
+                    FontSize="25"
+                    TextColor="Orange"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    Margin="0, 15, 0, 0"/>
+        </StackLayout>
+
+
+    </VerticalStackLayout>
+</ContentPage>
